@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svenfulenchek.shipmenttracker.Controllers.lookup_shipment">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Lookup Shipment">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TableView fx:id="shipments_table" layoutX="14.0" layoutY="57.0" prefHeight="328.0" prefWidth="574.0">
+        <columns>
+          <TableColumn fx:id="shipment_id_col" prefWidth="41.0" text="ID" />
+          <TableColumn fx:id="supplier_col" prefWidth="97.0" text="Supplier" />
+            <TableColumn fx:id="trailer_col" prefWidth="64.0" text="Trailer #" />
+            <TableColumn fx:id="carrier_col" prefWidth="50.0" text="Carrier" />
+            <TableColumn fx:id="tracking_col" prefWidth="188.0" text="Tracking #" />
+            <TableColumn fx:id="expected_col" minWidth="0.0" prefWidth="68.0" text="Expected" />
+            <TableColumn fx:id="received_col" prefWidth="65.0" text="Received" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="choice_box" layoutX="263.0" layoutY="19.0" prefHeight="25.0" prefWidth="115.0" />
+      <Button fx:id="search_button" layoutX="534.0" layoutY="19.0" mnemonicParsing="false" onAction="#onSearch" text="Search" />
+      <TextField fx:id="search_field" layoutX="378.0" layoutY="19.0" />
+      <Button fx:id="view_shipment_button" layoutX="546.0" layoutY="385.0" mnemonicParsing="false" onAction="#onView" text="View" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="570.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svenfulenchek.shipmenttracker.Controllers.edit_shipment">
+   <children>
+      <ListView fx:id="item_list_view" layoutX="400.0" layoutY="99.0" prefHeight="420.0" prefWidth="360.0" />
+      <Button fx:id="remove_item_button" layoutX="400.0" layoutY="67.0" mnemonicParsing="false" onAction="#removeListItem" prefHeight="25.0" prefWidth="92.0" text="Remove Item" />
+      <Button fx:id="add_item_button" layoutX="692.0" layoutY="67.0" mnemonicParsing="false" onAction="#addListItem" text="Add Item" />
+      <TextField fx:id="add_item_text_field" layoutX="505.0" layoutY="67.0" prefHeight="25.0" prefWidth="188.0" />
+      <Label fx:id="screen_title" layoutX="14.0" layoutY="9.0" text="Edit Shipment">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tracking_number_text_field" layoutX="14.0" layoutY="67.0" prefHeight="25.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="carrier_choice_box" layoutX="14.0" layoutY="174.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="14.0" layoutY="157.0" prefHeight="17.0" prefWidth="44.0" text="Carrier" />
+      <Label layoutX="14.0" layoutY="50.0" text="Tracking Number" />
+      <Label layoutX="237.0" layoutY="50.0" text="Expected Date" />
+      <DatePicker fx:id="expected_date_picker" layoutX="236.0" layoutY="67.0" prefHeight="25.0" prefWidth="97.0" />
+      <TextArea fx:id="notes_text_area" layoutX="11.0" layoutY="263.0" prefHeight="258.0" prefWidth="381.0" />
+      <Label layoutX="335.0" layoutY="50.0" text="Time" />
+      <TextField fx:id="expected_time_text_field" layoutX="336.0" layoutY="67.0" prefHeight="25.0" prefWidth="56.0" promptText="HH:MM" />
+      <Label layoutX="14.0" layoutY="105.0" />
+      <TextField fx:id="trailer_text_field" layoutX="236.0" layoutY="229.0" prefHeight="25.0" prefWidth="156.0" />
+      <Label layoutX="192.0" layoutY="233.0" text="Trailer #" />
+      <ChoiceBox fx:id="supplier_choice_box" layoutX="14.0" layoutY="122.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="14.0" layoutY="105.0" text="Supplier" />
+      <Label layoutX="11.0" layoutY="238.0" text="Notes" />
+      <Label layoutX="400.0" layoutY="50.0" text="Items In Shipment" />
+      <Button fx:id="submit_button" layoutX="681.0" layoutY="530.0" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="77.0" text="Done" />
+      <CheckBox fx:id="received_check_box" layoutX="236.0" layoutY="178.0" mnemonicParsing="false" onAction="#toggleReceivedEdit" text="Received" />
+      <DatePicker fx:id="received_date_picker" layoutX="236.0" layoutY="122.0" prefHeight="25.0" prefWidth="97.0" />
+      <TextField fx:id="received_time_text_field" layoutX="336.0" layoutY="122.0" prefHeight="25.0" prefWidth="56.0" promptText="HH:MM" />
+      <Label layoutX="238.0" layoutY="105.0" text="Received Date" />
+      <Label layoutX="335.0" layoutY="105.0" text="Time" />
+      <Button layoutX="622.0" layoutY="530.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+      <Button layoutX="10.0" layoutY="530.0" mnemonicParsing="false" onAction="#onDeleteShipment" text="DELETE SHIPMENT" />
+   </children>
+</AnchorPane>

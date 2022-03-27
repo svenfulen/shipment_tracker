@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svenfulenchek.shipmenttracker.Controllers.shipments">
+   <children>
+      <TableView fx:id="shipments_table" layoutX="16.0" layoutY="91.0" prefHeight="525.0" prefWidth="993.0">
+        <columns>
+          <TableColumn fx:id="shipment_id_col" prefWidth="84.0" text="Shipment ID" />
+            <TableColumn fx:id="supplier_col" prefWidth="90.0" text="Supplier" />
+            <TableColumn fx:id="carrier_col" minWidth="0.0" prefWidth="88.0" text="Carrier" />
+            <TableColumn fx:id="trailer_col" prefWidth="172.0" text="Trailer #" />
+          <TableColumn fx:id="tracking_col" prefWidth="197.0" text="Tracking Number" />
+            <TableColumn fx:id="notes_col" prefWidth="262.0" text="Notes" />
+            <TableColumn fx:id="expected_col" prefWidth="99.0" text="Expected Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="47.0" text="Inbound Shipments">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1024.0">
+        <menus>
+          <Menu fx:id="new_menu_button" mnemonicParsing="false" text="New">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onNewShipment" text="Shipment" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Lookup">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onLookupShipment" text="Shipment" />
+                  <MenuItem mnemonicParsing="false" onAction="#onTrailerHistory" text="Trailer" />
+                  <MenuItem mnemonicParsing="false" onAction="#onCarriers" text="Carriers" />
+                  <MenuItem mnemonicParsing="false" onAction="#onSuppliers" text="Suppliers" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="935.0" layoutY="627.0" mnemonicParsing="false" onAction="#onReceive" prefWidth="74.0" text="Receive" />
+      <Button layoutX="886.0" layoutY="627.0" mnemonicParsing="false" onAction="#onView" text="View" />
+   </children>
+</AnchorPane>

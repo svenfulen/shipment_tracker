@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svenfulenchek.shipmenttracker.Controllers.trailer_history">
+   <children>
+      <TableView fx:id="shipments_table" layoutX="15.0" layoutY="49.0" prefHeight="338.0" prefWidth="492.0">
+        <columns>
+          <TableColumn fx:id="shipment_id_col" prefWidth="78.0" text="Shipment ID" />
+          <TableColumn fx:id="carrier_col" prefWidth="112.0" text="Carrier" />
+            <TableColumn fx:id="tracking_col" prefWidth="183.0" text="Tracking #" />
+            <TableColumn fx:id="date_col" minWidth="0.0" prefWidth="118.0" text="Expected Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="14.0" text="Trailer History">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="search_field" layoutX="393.0" layoutY="19.0" prefHeight="25.0" prefWidth="75.0" promptText="Trailer #" />
+      <Button fx:id="search_button" layoutX="468.0" layoutY="19.0" mnemonicParsing="false" onAction="#onSearch" text="Find" />
+   </children>
+</AnchorPane>

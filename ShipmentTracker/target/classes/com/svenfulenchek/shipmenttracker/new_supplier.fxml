@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="303.0" prefWidth="344.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svenfulenchek.shipmenttracker.Controllers.new_supplier">
+   <children>
+      <Button layoutX="290.0" layoutY="270.0" mnemonicParsing="false" onAction="#onSubmit" text="Save" />
+      <Label layoutX="14.0" layoutY="71.0" text="Website" />
+      <TextField fx:id="name_field" layoutX="14.0" layoutY="37.0" />
+      <TextField fx:id="website_field" layoutX="14.0" layoutY="88.0" />
+      <Label layoutX="184.0" layoutY="14.0" text="Phone #" />
+      <Label layoutX="184.0" layoutY="71.0" text="Email" />
+      <TextField fx:id="email_field" layoutX="184.0" layoutY="88.0" />
+      <TextField fx:id="phone_field" layoutX="184.0" layoutY="37.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Name" />
+      <TextField fx:id="address_field" layoutX="14.0" layoutY="137.0" prefHeight="25.0" prefWidth="317.0" />
+      <Label layoutX="14.0" layoutY="120.0" text="Address" />
+      <Label layoutX="14.0" layoutY="170.0" text="Notes" />
+      <TextArea fx:id="notes_text_area" layoutX="14.0" layoutY="187.0" prefHeight="74.0" prefWidth="317.0" />
+   </children>
+</AnchorPane>

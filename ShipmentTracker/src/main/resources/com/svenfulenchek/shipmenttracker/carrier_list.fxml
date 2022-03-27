@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="440.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svenfulenchek.shipmenttracker.Controllers.carrier_list">
+   <children>
+      <ListView fx:id="carrier_list_view" layoutX="14.0" layoutY="49.0" prefHeight="363.0" prefWidth="243.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Carriers">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="220.0" layoutY="19.0" mnemonicParsing="false" onAction="#onEditCarrier" text="Edit" />
+      <TableView fx:id="inbound_shipments_table" layoutX="269.0" layoutY="313.0" prefHeight="99.0" prefWidth="317.0">
+        <columns>
+          <TableColumn fx:id="shipment_id_col" prefWidth="75.0" text="Shipment ID" />
+          <TableColumn fx:id="trailer_col" prefWidth="75.0" text="Trailer #" />
+            <TableColumn fx:id="tracking_col" prefWidth="166.0" text="Tracking #" />
+        </columns>
+      </TableView>
+      <Label layoutX="269.0" layoutY="100.0" text="Website" />
+      <TextField fx:id="name_field" editable="false" layoutX="269.0" layoutY="66.0" />
+      <TextField fx:id="phone_field" editable="false" layoutX="437.0" layoutY="66.0" />
+      <Label layoutX="437.0" layoutY="49.0" text="Phone #" />
+      <Button layoutX="180.0" layoutY="19.0" mnemonicParsing="false" onAction="#onNewCarrier" text="New" />
+      <Label layoutX="437.0" layoutY="100.0" text="Email" />
+      <TextField fx:id="email_field" editable="false" layoutX="437.0" layoutY="117.0" />
+      <TextField fx:id="website_field" editable="false" layoutX="269.0" layoutY="117.0" />
+      <Label layoutX="269.0" layoutY="49.0" text="Name" />
+      <TextField fx:id="address_field" editable="false" layoutX="269.0" layoutY="167.0" prefHeight="25.0" prefWidth="317.0" />
+      <Label layoutX="269.0" layoutY="150.0" text="Address" />
+      <Label layoutX="269.0" layoutY="296.0" text="Inbound Shipments" />
+      <Label layoutX="269.0" layoutY="203.0" text="Notes" />
+      <TextArea fx:id="notes_text_area" editable="false" layoutX="269.0" layoutY="220.0" prefHeight="74.0" prefWidth="317.0" />
+   </children>
+</AnchorPane>
